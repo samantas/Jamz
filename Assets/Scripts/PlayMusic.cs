@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class PlayMusic : Photon.MonoBehaviour {
+
 	public AudioClip clip;
 	public AudioSource mySource;
 	public float myVolume = 1.0f;

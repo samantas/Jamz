@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimateDrums : MonoBehaviour {
+public class AnimateDrums : Photon.MonoBehaviour {
 
 	protected Animator MyAnimator;
 
@@ -22,9 +22,32 @@ public class AnimateDrums : MonoBehaviour {
 
 	public void hitMe(){
 
+//		MyAnimator.SetTrigger ("playerHitMe");
+//		Debug.Log ("playerHitMe triggered");
+		photonView.RPC ("hitAll", PhotonTargets.All, null);
+
+	}
+
+	[PunRPC]
+	public void hitAll(){
 		MyAnimator.SetTrigger ("playerHitMe");
 		Debug.Log ("playerHitMe triggered");
-
 	}
 	
 }
+
+
+
+// FOR REFERENCE ONLY
+//public void PlaySound(AudioClip clip){
+//	
+//	stringclip = clip.ToString();
+//	Debug.Log (stringclip);
+//	
+//	photonView.RPC("PlaySoundHandler",PhotonTargets.All, null);
+//	
+//	//explosions
+//	photonView.RPC("DoExploder",PhotonTargets.All, new object[]{15});
+//}
+
+
