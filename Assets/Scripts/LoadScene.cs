@@ -6,11 +6,7 @@ public class LoadScene : MonoBehaviour {
 
 	public Text updateText;
 	public Text connectedPlayers;
-	public int numPlayers;
-
-	public NetworkController network;
-	public NetworkedPlayer player;
-
+	
 	private bool loading = false;
 
 	// Use this for initialization
