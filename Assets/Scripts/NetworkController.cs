@@ -6,6 +6,8 @@ public class NetworkController : MonoBehaviour
 {
 	string _room = "Tutorial_Convrge";
 
+	public bool imConnected = false;
+
 	//SPAWN SHITTTT
 	/*
 	private GameObject[] spawnPointList;
@@ -46,6 +48,10 @@ public class NetworkController : MonoBehaviour
 	{
 
 		//PhotonNetwork.Instantiate("CardboardMain", new Vector3(Random.Range(-5.0F, 5.0F), 0, Random.Range(-5.0F, 5.0F)), Quaternion.identity, 0);
-		PhotonNetwork.Instantiate("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
+		PhotonNetwork.Instantiate ("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
+
+		// do I check if player is connected here???
+
 	}
+
 }
