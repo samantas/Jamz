@@ -7,8 +7,6 @@ public class NetworkedPlayer : Photon.MonoBehaviour
 	
 	public Transform playerGlobal;
 	public Transform playerLocal;
-
-	public bool imConnected;
 	
 	void Start ()
 	{
@@ -26,8 +24,6 @@ public class NetworkedPlayer : Photon.MonoBehaviour
 			this.transform.SetParent(playerLocal);
 			this.transform.localPosition = Vector3.zero;
 
-			// to reference in the LoadScene script to check it a player is connected
-			imConnected = true;
 			//avatar.SetActive(false);
 		}
 	}

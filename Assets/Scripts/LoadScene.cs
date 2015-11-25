@@ -24,13 +24,9 @@ public class LoadScene : MonoBehaviour {
 			updateText.text = "Loading...";
 		}
 
-		// maintain a count of players that are connected and currently playing
-		if (player.imConnected == true) {
-			numPlayers += 1;
-			connectedPlayers.text = numPlayers + " connected players";
-		} else {
+		// maintain a count of players that are connected
+		connectedPlayers.text = PhotonNetwork.countOfPlayers + " connected players";
 
-		}
 	}
 
 	public void loadScene(){
